@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/fe945070f3.js"></script>
+
+    <link rel="stylesheet" href="alison.css">
+    <title>Alison</title>
+</head>
+<body>
+    <section class="cajero">                        <!--Cja Principal -->
+        <section class="arriba">
+            <section class="lado1" style="float: left;">
+                <input class="btn1" type="button" value=">" onclick="btn_1()">
+                <input class="btn2" type="button" value=">">
+                <input class="btn3" type="button" value=">">
+                <input class="btn4" type="button"   value=">">                
+            </section>        
+            <section class="pantalla">
+                <div id="presentacion_1" >             <!--Banco -->
+                    <h3>¡Bienvenido al Banco BBVA!</h3>
+                        <p>Por favor digite su clave</p>
+                            <input data-previous type="password" name="visor" id = "contrasena" disabled><br>
+                </div>
+                <div id="presentacion_2">        <!--Pre 2. -->
+                    <h4>MENU PRINCIPAL</h4>
+                    <div class="lado1">
+                        <p>Retiro</p>
+                        <p>Consulta</p>
+                        <p>Operaciones</p>
+
+                    </div>
+                    <div class="lado2">
+                        <p>Transferencia</p>
+
+                    </div>
+                </div>
+
+                <div id="presentacion_3"> 
+                    <h4>RETIRO</h4>
+                    <div class="lado1">
+                        <p>Retiro Soles</p>
+                        <br>
+                        <br>
+                        <br>
+
+                    </div>
+                    <div class="lado2">
+                        <p>Retirar Dolare</p>
+                        <br>
+                        <br>
+                        <p>Cancelar</p>
+
+                    </div>
+                </div>
+                <div id="presentacion_4"> 
+                    <h4>RETIRO</h4>
+                    <div class="lado1">
+                        <p>S/. 20</p>
+                        <p>S/. 150</p>
+                        <p>S/. 300</p>
+                        <br>
+
+                    </div>
+                    <div class="lado2">
+                        <p>S/. 100</p>
+                        <p>S/. 200</p>
+                        <p>Otras Cantidades</p>
+                        <p>Cancelar</p>
+
+                    </div>
+                </div>
+                <div id="presentacion_5"> 
+                    <h5>INGRESAR MONTO A RETIRAR EN MULTIPLOS DE 10</h5>
+                    <label for="monto_10">S/.</label><input data-previous type="number" name="monto_10" id = "monto_10"><br>
+                    <div class="lado1">
+                        <p>S/. 20</p>
+                        <p>S/. 150</p>
+                        <p>S/. 300</p>
+                        <br>
+
+                    </div>
+                    <div class="lado2">
+                        <p>S/. 100</p>
+                        <p>S/. 200</p>
+                        <p>Otras Cantidades</p>
+                        <p>Cancelar</p>
+
+                    </div>
+                </div>
+                <div id="presentacion_6"> 
+                    <h5>TRANSACCION PROCESADA</h5> 
+                    <h6> ¿Desea realizar otra transacción?</h6>
+                </div>
+                <div id="presentacion_7"> 
+                    <h4>GRACIAS, </h4>
+                    <br>
+                    <h4>HASTA LUEGO</h4>
+                </div>
+                
+
+
+            </section>
+            <section class="lado2" style="float: right;">
+                <input class="btn5" type="button" value=">">
+                <input class="btn6" type="button" value=">" onclick="btn_6()">
+                <input class="btn7" type="button" value=">" onclick="btn_7()">
+                <input class="btn8" type="button" value=">" onclick="btn_8()">
+            </section>
+        </section>
+        <section class="abajo">
+            <section id="lado_bajo">
+                <div class="op">
+                    <div>
+                        <input type="button" class="boton" value="1" onclick="add('1')">
+                        <input type="button" class="boton" value="2" onclick="add('2')">
+                        <input type="button" class="boton" value="3" onclick="add('3')">
+                    </div>  
+                    <div>
+                        <input type="button" class="boton" value="4" onclick="add('4')">
+                        <input type="button" class="boton" value="5" onclick="add('5')">
+                        <input type="button" class="boton" value="6" onclick="add('6')">
+                    </div>
+                    <div>
+                        <input type="button" class="boton" value="7" onclick="add('7')">
+                        <input type="button" class="boton" value="8" onclick="add('8')">
+                        <input type="button" class="boton" value="9" onclick="add('9')">
+                    </div>
+                    <div>           
+                        <input type="button" class="boton" value=" " disabled>
+                        <input type="button" class="boton" value="0" onclick="add('0')">
+                        <input type="button" class="boton" value="." onclick="add('.')">
+                    </div>
+                </div><!--fin ope-->
+                <div class="botones">
+                    <input type="submit" value="CANCEL" id="cancel" onclick="cancelar()">
+                    <input type="submit" value="CLEAR" id="clear"   onclick="borrar()">
+                    <input type="submit" value="OK" id="ok"         onclick="ok()">
+                    <input type="submit" value="" id="none">
+                </div>
+            </section>
+
+            <section class="cajas">
+                <section id="recibo">
+                    <P id="accion">RECEIPT</P>
+                    <img src="imagenes/alison.png" alt="">
+                </section>
+                <section id="tarjeta">
+                    <p id="accion">CARD</p>
+                    <img src="imagenes/alison.png" alt="">
+                </section>
+                <section id="efectivo">
+                    <p id="accion">CASH</p>
+                    <img src="imagenes/alison.png" alt="">
+                </section>
+                <section id="depositar">
+                    <p id="accion">DEPOSIT</p>     
+                    <img src="imagenes/alison.png" alt="">   
+                </section>
+            </section>
+     
+        </section>
+<script src="js/script.js"></script>
+
+</body>
+</html>
